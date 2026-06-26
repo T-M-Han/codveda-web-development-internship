@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>TaskMate | JavaScript To-Do App</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div class="app-container">
+
+    <!-- Header -->
+    <header class="app-header">
+      <div>
+        <p class="app-label">Level 2 Project</p>
+        <h1>TaskMate</h1>
+        <p class="app-description">
+          A responsive JavaScript to-do list app with local storage.
+        </p>
+      </div>
+    </header>
+
+    <!-- Task Form -->
+    <section class="task-panel">
+      <form id="taskForm" class="task-form">
+        <input 
+          type="text" 
+          id="taskInput" 
+          placeholder="Enter a new task..." 
+        />
+
+        <button type="submit" class="add-btn">
+          Add Task
+        </button>
+      </form>
+
+      <p id="errorMessage" class="error-message"></p>
+    </section>
+
+    <!-- Filters -->
+    <section class="filter-section">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="active">Active</button>
+      <button class="filter-btn" data-filter="completed">Completed</button>
+    </section>
+
+    <!-- Task Summary -->
+    <section class="summary-grid">
+      <div class="summary-card">
+        <h3 id="totalTasks">0</h3>
+        <p>Total Tasks</p>
+      </div>
+
+      <div class="summary-card">
+        <h3 id="activeTasks">0</h3>
+        <p>Active</p>
+      </div>
+
+      <div class="summary-card">
+        <h3 id="completedTasks">0</h3>
+        <p>Completed</p>
+      </div>
+    </section>
+
+    <!-- Task List -->
+    <main class="task-list-section">
+      <h2>My Tasks</h2>
+
+      <div id="taskList" class="task-list"></div>
+
+      <p id="emptyMessage" class="empty-message">
+        No tasks yet. Add your first task above.
+      </p>
+    </main>
+
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
